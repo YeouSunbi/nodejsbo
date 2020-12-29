@@ -3,8 +3,8 @@ const client = new Discord.Client();
 const token = process.argv.length == 2 ? process.env.token : "";
 const welcomeChannelName = "안녕하세요";
 const byeChannelName = "안녕히가세요";
-const welcomeChannelComment = "어서오세요.";
-const byeChannelComment = "안녕히가세요.";
+const welcomeChannelComment = "어서오세요. 여기는 여우선비의 방송국 입니다. 저랑 같이 재미있는 시참해요.";
+const byeChannelComment = "안녕히가세요. 또 올거죠. 나중에도 같이 게임해요.";
 
 client.on('ready', () => {
   console.log('켰다.');
@@ -18,7 +18,7 @@ client.on("guildMemberAdd", (member) => {
 
   welcomeChannel.send(`<@${newUser.id}> ${welcomeChannelComment}\n`);
 
-  member.addRole(guild.roles.find(role => role.name == "게스트"));
+  member.addRole(guild.roles.find(role => role.name == "시청자"));
 });
 
 client.on("guildMemberRemove", (member) => {
@@ -37,11 +37,11 @@ client.on('message', (message) => {
   }
 
   if(message.content == 'embed') {
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let img = 'https://cdn.discordapp.com/attachments/793428884262617108/793479155572408330/KakaoTalk_20201205_193057208.jpg';
     let embed = new Discord.RichEmbed()
-      .setTitle('타이틀')
-      .setURL('http://www.naver.com')
-      .setAuthor('나긋해', img, 'http://www.naver.com')
+      .setTitle('여우선비 방송국')
+      .setURL('https://www.twitch.tv/bjkua12')
+      .setAuthor('여우선비', img, 'https://www.twitch.tv/bjkua12')
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title', 'Some value here')
@@ -51,11 +51,11 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('나긋해가 만듬', img)
+      .setFooter('여우선비 스트리머', img)
 
     message.channel.send(embed)
   } else if(message.content == '!help') {
-    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let helpImg = 'https://cdn.discordapp.com/attachments/793428884262617108/793480285438214164/0004184016_001_20190306090200823.jpg';
     let commandList = [
       {name: '!help', desc: 'help'},
       {name: 'ping', desc: '현재 핑 상태'},
@@ -68,9 +68,9 @@ client.on('message', (message) => {
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setAuthor('Help of 여우 BOT', helpImg)
       .setColor('#186de6')
-      .setFooter(`콜라곰 BOT ❤️`)
+      .setFooter(`여우 BOT ❤️`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -110,9 +110,9 @@ client.on('message', (message) => {
     if(message.member != null) { // 채널에서 공지 쓸 때
       let contents = message.content.slice('!전체공지2'.length);
       let embed = new Discord.RichEmbed()
-        .setAuthor('공지 of 콜라곰 BOT')
+        .setAuthor('공지 of 여우 BOT')
         .setColor('#186de6')
-        .setFooter(`콜라곰 BOT ❤️`)
+        .setFooter(`여우 BOT ❤️`)
         .setTimestamp()
   
       embed.addField('공지: ', contents);
