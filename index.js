@@ -48,7 +48,7 @@ client.on('message', (message) => {
       .addField('성별?', '남자 입니다.', true)
       .addField('유튜브?', '유튜브 활동을 않하고 있습니다.', true)
       .addField('고멤?', '저는 HK패밀리에서 부수장으로 역활중입니다.', true)
-      .addField('여우선비님 이상형은?', '키는 저보다 작고\음악이나\노래 부르는것을 좋아하는 사람\n')
+      .addField('여우선비님 이상형은?', '키는 저보다 작고 음악이나 노래 부르는것을 좋아하는 사람\n')
       .addBlankField()
       .setTimestamp()
       .setFooter('여우선비 스트리머', img)
