@@ -44,7 +44,7 @@ client.on('message', (message) => {
       .setAuthor('여우선비', img, 'https://www.twitch.tv/bjkua12')
       .setThumbnail(img)
       .addBlankField()
-      .addField('Inline field title', 'Some value here')
+      .addField('Inline field title', '여기는 여우선비님께서 일하는 곳입니다.')
       .addField('Inline field title', 'Some value here', true)
       .addField('Inline field title', 'Some value here', true)
       .addField('Inline field title', 'Some value here', true)
