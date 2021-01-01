@@ -36,7 +36,7 @@ client.on('message', (message) => {
     return message.reply('여하 여러분들 안녕하세요~!!');
   }
 
-  if(message.content == '스트리머') {
+  if(message.content == '!스트리머') {
     let img = 'https://cdn.discordapp.com/attachments/793428884262617108/793479155572408330/KakaoTalk_20201205_193057208.jpg';
     let embed = new Discord.RichEmbed()
       .setTitle('여우선비 방송국')
@@ -58,8 +58,8 @@ client.on('message', (message) => {
     let helpImg = 'https://cdn.discordapp.com/attachments/793428884262617108/793480285438214164/0004184016_001_20190306090200823.jpg';
     let commandList = [
       {name: '!help', desc: 'help'},
-      {name: 'ping', desc: '현재 핑 상태'},
-      {name: '스트리머', desc: 'embed 예제1'},
+      {name: '!아이린', desc: '현재 핑 상태'},
+      {name: '!스트리머', desc: 'embed 예제1'},
       {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
       {name: '!전체공지2', desc: 'dm으로 전체 embed 형식으로 공지 보내기'},
       {name: '!청소', desc: '텍스트 지움'},
