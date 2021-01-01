@@ -32,8 +32,8 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == 'ping') {
-    return message.reply('pong');
+  if(message.content == '!아이린') {
+    return message.reply('여하 여러분들 안녕하세요~!!');
   }
 
   if(message.content == '스트리머') {
