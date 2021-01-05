@@ -32,7 +32,7 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == '!아이린') {
+  if(message.content == '!여우') {
     return message.reply('여하 여러분들 안녕하세요~!!');
   }
 
@@ -47,7 +47,7 @@ client.on('message', (message) => {
       .addField('스트리머?', '여우선비님 입니다.')
       .addField('성별?', '남자 입니다.', true)
       .addField('유튜브?', '유튜브 활동을 않하고 있습니다.', true)
-      .addField('고멤?', '저는 HK패밀리에서 부수장으로 역활중입니다.', true)
+      .addField('고멤?', '아직 할 생각 이 없습니다.', true)
       .addField('여우선비님 이상형은?', '키는 저보다 작고 음악이나 노래 부르는것을 좋아하는 사람\n')
       .addBlankField()
       .setTimestamp()
@@ -55,10 +55,10 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   } else if(message.content == '!help') {
-    let helpImg = 'https://cdn.discordapp.com/attachments/793428884262617108/793480285438214164/0004184016_001_20190306090200823.jpg';
+    let helpImg = 'https://cdn.discordapp.com/attachments/778933824272728064/795992659264143400/download20210105145201.png';
     let commandList = [
       {name: '!help', desc: 'help'},
-      {name: '!아이린', desc: '현재 핑 상태'},
+      {name: '!여우', desc: '현재 핑 상태'},
       {name: '!스트리머', desc: 'embed 예제1'},
       {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
       {name: '!전체공지2', desc: 'dm으로 전체 embed 형식으로 공지 보내기'},
