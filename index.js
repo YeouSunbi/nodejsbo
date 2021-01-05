@@ -8,7 +8,7 @@ const byeChannelComment = "안녕히가세요. 또 올거죠. 나중에도 같�
 
 client.on('ready', () => {
   console.log('켰다.');
-  client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, status: 'online' })
+  client.user.setPresence({ game: { name: '!도움말를 쳐보세요.' }, status: 'online' })
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -54,10 +54,10 @@ client.on('message', (message) => {
       .setFooter('여우선비 스트리머', img)
 
     message.channel.send(embed)
-  } else if(message.content == '!help') {
+  } else if(message.content == '!도움말') {
     let helpImg = 'https://cdn.discordapp.com/attachments/778933824272728064/795992659264143400/download20210105145201.png';
     let commandList = [
-      {name: '!help', desc: 'help'},
+      {name: '!도움말', desc: '도움말'},
       {name: '!여우', desc: '현재 핑 상태'},
       {name: '!스트리머', desc: 'embed 예제1'},
       {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
@@ -68,7 +68,7 @@ client.on('message', (message) => {
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 여우 BOT', helpImg)
+      .setAuthor('도움말 of 여우 BOT', helpImg)
       .setColor('#186de6')
       .setFooter(`여우 BOT ❤️`)
       .setTimestamp()
