@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const token = process.argv.length == 2 ? process.env.token : "";
 const welcomeChannelName = "안녕하세요";
 const byeChannelName = "안녕히가세요";
-const welcomeChannelComment = "어서오세요. 여기는 여우선비의 방송국 입니다. 저랑 같이 재미있는 시참해요.";
+const welcomeChannelComment = "어서오세요. 여기는 여도련의 방송국 입니다. 저랑 같이 재미있는 시참해요.";
 const byeChannelComment = "안녕히가세요. 또 올거죠. 나중에도 같이 게임해요.";
 
 client.on('ready', () => {
@@ -39,19 +39,19 @@ client.on('message', (message) => {
   if(message.content == '!스트리머') {
     let img = 'https://cdn.discordapp.com/attachments/793428884262617108/793479155572408330/KakaoTalk_20201205_193057208.jpg';
     let embed = new Discord.RichEmbed()
-      .setTitle('여우선비 방송국')
+      .setTitle('여도련 방송국')
       .setURL('https://www.twitch.tv/bjkua12')
-      .setAuthor('여우선비', img, 'https://www.twitch.tv/bjkua12')
+      .setAuthor('여도련', img, 'https://www.twitch.tv/bjkua12')
       .setThumbnail(img)
       .addBlankField()
-      .addField('스트리머?', '여우선비님 입니다.')
+      .addField('스트리머?', '여도련님 입니다.')
       .addField('성별?', '남자 입니다.', true)
       .addField('유튜브?', '유튜브 활동을 않하고 있습니다.', true)
       .addField('고멤?', '아직 할 생각 이 없습니다.', true)
-      .addField('여우선비님 이상형은?', '키는 저보다 작고 음악이나 노래 부르는것을 좋아하는 사람\n')
+      .addField('여도련님 이상형은?', '키는 저보다 작고 음악이나 노래 부르는것을 좋아하는 사람\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('여우선비 스트리머', img)
+      .setFooter('여도련 스트리머', img)
 
     message.channel.send(embed)
   } else if(message.content == '!도움말') {
